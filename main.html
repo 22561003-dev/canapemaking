@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>카나페 만들기</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; }
+        .controls { margin-bottom: 20px; }
+        .controls label {
+            padding: 10px; margin: 5px; background-color: #f0f0f0;
+            border: 1px solid #ccc; cursor: pointer; display: inline-block;
+        }
+        input[type="checkbox"]:checked + label {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .canape-container {
+            position: relative; width: 400px; height: 300px; border: 1px solid #ccc; margin-top: 20px;
+        }
+        .ingredient-img {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: none;
+        }
+        .base-img { display: block; width: 100%; height: 100%; }
+        
+        #check-C2:checked ~ #check-H ~ #check-T ~ #check-5 ~ #check-M ~ #check-O ~ #check-P ~ #check-N ~ #check-C3 ~ .canape-container #img-C2 { display: block; }
+        #check-H:checked ~ #check-T ~ #check-5 ~ #check-M ~ #check-O ~ #check-P ~ #check-N ~ #check-C3 ~ .canape-container #img-H { display: block; }
+        #check-T:checked ~ #check-5 ~ #check-M ~ #check-O ~ #check-P ~ #check-N ~ #check-C3 ~ .canape-container #img-T { display: block; }
+        #check-5:checked ~ #check-M ~ #check-O ~ #check-P ~ #check-N ~ #check-C3 ~ .canape-container #img-5 { display: block; }
+        #check-M:checked ~ #check-O ~ #check-P ~ #check-N ~ #check-C3 ~ .canape-container #img-M { display: block; }
+        #check-O:checked ~ #check-P ~ #check-N ~ #check-C3 ~ .canape-container #img-O { display: block; }
+        #check-P:checked ~ #check-N ~ #check-C3 ~ .canape-container #img-P { display: block; }
+        #check-N:checked ~ #check-C3 ~ .canape-container #img-N { display: block; }
+        #check-C3:checked ~ .canape-container #img-C3 { display: block; }
+
+
+        .info-link {
+            margin-top: 20px; display: inline-block; padding: 10px 20px;
+            background-color: #ff0084;
+            color: white; text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>나만의 카나페 만들기</h1>
+    <p>아래 재료를 클릭하여 추가/제거해 보세요.</p>
+
+    <div class="controls">
+        <label for="check-C2">치즈</label>
+        <label for="check-H">햄</label>
+        <label for="check-T">토마토</label>
+        <label for="check-5">오이</label>
+        <label for="check-M">마요네즈</label>
+        <label for="check-O">석화굴</label>
+        <label for="check-P">대파</label>
+        <label for="check-N">농담곰</label>
+        <label for="check-C3">체리</label>
+    </div>
+
+    <input type="checkbox" id="check-C2" hidden>
+    <input type="checkbox" id="check-H" hidden>
+    <input type="checkbox" id="check-T" hidden>
+    <input type="checkbox" id="check-5" hidden>
+    <input type="checkbox" id="check-M" hidden>
+    <input type="checkbox" id="check-O" hidden>
+    <input type="checkbox" id="check-P" hidden>
+    <input type="checkbox" id="check-N" hidden>
+    <input type="checkbox" id="check-C3" hidden>
+
+
+    <div class="canape-container">
+        <img src="C.png" alt="카나페 베이스" class="base-img">
+        <img id="img-C2" src="C2.png" alt="치즈" class="ingredient-img">
+        <img id="img-H" src="H.png" alt="햄" class="ingredient-img">
+        <img id="img-T" src="T.png" alt="토마토" class="ingredient-img">
+        <img id="img-5" src="5.png" alt="오이" class="ingredient-img">
+        <img id="img-M" src="M.png" alt="마요네즈" class="ingredient-img">
+        <img id="img-O" src="O.png" alt="석화굴" class="ingredient-img">
+        <img id="img-P" src="P.png" alt="대파" class="ingredient-img">
+        <img id="img-N" src="N.png" alt="농담곰" class="ingredient-img">
+        <img id="img-C3" src="C3.png" alt="체리" class="ingredient-img">
+    </div>
+    
+    <a href="end.html" class="info-link">카나페 스토리 알기</a>
+</body>
+</html>
